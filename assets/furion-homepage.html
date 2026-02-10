@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <title>REDIRECIONAMENTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="REDIRECIONAMENTO">
+  <link rel="shortcut icon" href="https://projects.clickmax.io/369b4012-a86d-47f9-89ae-a911212b0472/d1f226a8-fba8-42ec-b6b9-bfea83d7aab5/uploads/favicon.png" />
+
+  <style> </style>
+
+  <meta property="og:title" content="REDIRECIONAMENTO" />
+  <meta property="og:description" content="REDIRECIONAMENTO" />
+  <meta property="og:image" content="https://projects.clickmax.io/369b4012-a86d-47f9-89ae-a911212b0472/d1f226a8-fba8-42ec-b6b9-bfea83d7aab5/og_image.png" />
+  <meta property="fav:icon" content="https://projects.clickmax.io/369b4012-a86d-47f9-89ae-a911212b0472/d1f226a8-fba8-42ec-b6b9-bfea83d7aab5/uploads/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize"/>
+  <link rel="stylesheet" href="https://cdn.clickmax.io/fontawesome/fontawesome-free-6.6.0-web/css/all.min.css"/>
+  <link rel="stylesheet" href="https://editor.clickmax.io/scripts-generated/main.css"/>
+  <link rel="stylesheet" href="https://editor.clickmax.io/styles/utils.css"/>
+  <link rel="stylesheet" href="https://projects.clickmax.io/437f955e-4cf5-4577-98b3-fe36ca4b0cc8/style-guides/4fd74e4d-0fa9-4a22-ad91-046f5a7aa7ce.css">
+
+
+  <script src="https://cdn.clickmax.io/fontawesome/fontawesome-free-6.6.0-web/js/all.min.js" data-auto-replace-svg="false" crossorigin="anonymous"></script>
+
+
+  <meta http-equiv="refresh" content="0; url=https://lp.furion.ai/trimestral-meta">
+
+</head>
+
+   
+
+
+
+
+
+
+
+<script>
+  const regex = /https:\/\/pay\.kiwify\.com\.br\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/app\.monetizze\.com\.br\/checkout\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|http:\/\/mon\.net\.br\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/payment\.ticto\.app\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/pay\.hotmart\.com\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/go\.hotmart\.com\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/go\.perfectpay\.com\.br\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/chk\.eduzz\.com\/[0-9A-Za-z]+(?:\?[^'"\s]+)?|https:\/\/sun\.eduzz\.com\//g
+  const pageId = "d1f226a8-fba8-42ec-b6b9-bfea83d7aab5"
+
+  const links = document.querySelectorAll('a')
+
+  links.forEach((link) => {
+    const htmlUrl = link.href
+    const match = htmlUrl.match(regex)
+    if (match){
+      let param = 'src='
+      if (htmlUrl.includes('eduzz')) {
+        param = 'utm_source='
+      }
+
+      const pageIdParts = pageId.substring(0, 4) + pageId.substring(pageId.length - 4)
+
+      let paramUrl
+      if (htmlUrl.includes(param)) {
+        const htmlParts = htmlUrl.split(param)
+        paramUrl = htmlParts[0] + `${param}cm${pageIdParts}|` + htmlParts[1]
+      } else {
+        if (htmlUrl.includes('?')) {
+          const htmlParts = htmlUrl.split('?')
+          paramUrl = htmlParts[0] + `?${param}cm${pageIdParts}&` + htmlParts[1]
+        } else {
+          paramUrl = htmlUrl + `?${param}cm${pageIdParts}`
+        }
+      }
+      link.setAttribute('href', paramUrl)
+    }
+  })
+</script>
+
+
+
+
+
+
+<script src="https://editor.clickmax.io/scripts-generated/main.js"></script>
+
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb90a468aa7706c',t:'MTc3MDY5OTU5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>

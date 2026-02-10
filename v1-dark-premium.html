@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>konte.ai × Lucas Flame — Proposta de Parceria</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
@@ -49,6 +50,8 @@
         .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(168,85,247,0.3), transparent); }
         @keyframes pulse-glow { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
         .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .whatsapp-btn { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .whatsapp-btn:hover { background: linear-gradient(135deg, #2be874, #159e8e); }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -56,19 +59,17 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass" data-aos="fade-down">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-blue-accent flex items-center justify-center">
-                    <span class="text-sm font-bold">K</span>
-                </div>
-                <span class="text-lg font-semibold">konte<span class="text-accent">.ai</span></span>
+            <div class="flex items-center gap-3">
+                <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-12 w-auto">
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
                 <a href="#plataforma" class="hover:text-white transition-colors">Plataforma</a>
+                <a href="#numeros" class="hover:text-white transition-colors">Numeros</a>
                 <a href="#investidores" class="hover:text-white transition-colors">Investidores</a>
                 <a href="#mercado" class="hover:text-white transition-colors">Mercado</a>
                 <a href="#parceria" class="hover:text-white transition-colors">Parceria</a>
             </div>
-            <a href="#parceria" class="px-5 py-2 rounded-xl bg-gradient-to-r from-accent to-blue-accent text-sm font-medium hover:opacity-90 transition-opacity">
+            <a href="https://wa.me/5531993472290?text=Oi%20Rafael%2C%20vi%20a%20proposta%20da%20konte.ai%20e%20quero%20conversar!" target="_blank" class="px-5 py-2 rounded-xl bg-gradient-to-r from-accent to-blue-accent text-sm font-medium hover:opacity-90 transition-opacity">
                 Ver Proposta
             </a>
         </div>
@@ -87,9 +88,10 @@
                         <span class="w-2 h-2 rounded-full bg-green-400 pulse-glow"></span>
                         Proposta Exclusiva — Fevereiro 2026
                     </div>
+                    <div class="mb-8">
+                        <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-20 w-auto mb-6">
+                    </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-7xl font-light leading-tight mb-6">
-                        <span class="text-gray-300">konte.ai</span>
-                        <br>
                         <span class="gradient-text font-semibold">×</span>
                         <br>
                         <span class="font-semibold">Lucas Flame</span>
@@ -112,7 +114,7 @@
                         <div class="relative glass-strong rounded-3xl p-8 glow-border">
                             <div class="flex flex-col items-center">
                                 <div class="profile-ring mb-4">
-                                    <img src="https://scontent-atl3-3.cdninstagram.com/v/t51.2885-19/468037094_3662312027392307_1820403816416972574_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=104&_nc_ohc=WR7_jSMPtJgQ7kNvgFuIxJV&_nc_gid=8c3ddd3cb39e464b87b0ac0f8e5e6b9c&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYFdpamLBT-x3B2VYPVxQHsLiKwg8KeU5nDJCqmqQbflDg&oe=67AD7EEB"
+                                    <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/lucas-flame"
                                          alt="Lucas Flame AI"
                                          class="w-24 h-24 rounded-full object-cover"
                                          onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%231a1a30%22 width=%22100%22 height=%22100%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23a855f7%22 font-size=%2232%22>LF</text></svg>'">
@@ -155,57 +157,137 @@
     <!-- Divider -->
     <div class="divider"></div>
 
-    <!-- About konte.ai -->
+    <!-- About konte.ai — Diferenciais Competitivos -->
     <section id="plataforma" class="py-32 relative section-gradient">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex items-start gap-6 mb-16" data-aos="fade-up">
+            <div class="flex items-start gap-6 mb-6" data-aos="fade-up">
                 <span class="text-8xl font-black text-white/5 leading-none">01</span>
                 <div>
-                    <h2 class="text-3xl md:text-5xl font-light mt-4">A Plataforma <span class="gradient-text font-semibold">konte.ai</span></h2>
-                    <p class="text-gray-400 text-lg mt-4 max-w-2xl">SaaS de criação de conteúdo com inteligência artificial — do brainstorm à publicação, automatizado.</p>
+                    <h2 class="text-3xl md:text-5xl font-light mt-4">Diferenciais <span class="gradient-text font-semibold">Competitivos</span></h2>
                 </div>
+            </div>
+            <div class="flex justify-center mb-16" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-16 w-auto opacity-80">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="glass rounded-2xl p-6 glow-border stat-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Criação Automatizada</h3>
-                    <p class="text-sm text-gray-400">IA que transforma ideias em conteúdo pronto para publicar em múltiplas plataformas.</p>
+                    <h3 class="font-semibold mb-2">Posts de Referência + IA</h3>
+                    <p class="text-sm text-gray-400">Tenha salvo todos os seus posts de referência e alimente sua própria AI com eles.</p>
                 </div>
                 <div class="glass rounded-2xl p-6 glow-border stat-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Escala Real</h3>
-                    <p class="text-sm text-gray-400">Produção de conteúdo em volume sem perder qualidade ou autenticidade da marca.</p>
+                    <h3 class="font-semibold mb-2">Perfil do Influenciador</h3>
+                    <p class="text-sm text-gray-400">Consulta e armazenamento do perfil do Influenciador e perfil de publicações.</p>
                 </div>
                 <div class="glass rounded-2xl p-6 glow-border stat-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Multi-Criador</h3>
-                    <p class="text-sm text-gray-400">Plataforma construída para escalar com múltiplos influenciadores e marcas simultâneas.</p>
+                    <h3 class="font-semibold mb-2">Banco de Hooks Virais</h3>
+                    <p class="text-sm text-gray-400">Banco de Dados de Hooks e Posts Virais Multiplataforma.</p>
                 </div>
                 <div class="glass rounded-2xl p-6 glow-border stat-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </div>
-                    <h3 class="font-semibold mb-2">IA Personalizada</h3>
-                    <p class="text-sm text-gray-400">Modelos treinados no tom, estilo e arquétipo de cada criador de conteúdo.</p>
+                    <h3 class="font-semibold mb-2">Pesquisa & Tendências</h3>
+                    <p class="text-sm text-gray-400">Focada em Pesquisa, Resultado pautado no que está em alta.</p>
                 </div>
             </div>
 
-            <!-- Platform Preview Placeholder -->
+            <!-- Platform Preview -->
             <div class="mt-16 glass rounded-3xl p-2 glow-purple" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-dark-800 rounded-2xl p-8 md:p-16 text-center">
-                    <div class="max-w-lg mx-auto">
-                        <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        </div>
-                        <p class="text-gray-500 text-sm">Preview da Plataforma</p>
-                        <p class="text-gray-600 text-xs mt-2">Screenshots e demo disponíveis na reunião</p>
+                <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/platform-screenshot" alt="konte.ai - Plataforma" class="w-full rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Números Atuais & Projeção -->
+    <section id="numeros" class="py-32 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-start gap-6 mb-16" data-aos="fade-up">
+                <span class="text-8xl font-black text-white/5 leading-none">02</span>
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-light mt-4">Números <span class="gradient-text font-semibold">Atuais</span></h2>
+                    <p class="text-gray-400 text-lg mt-4 max-w-2xl">Métricas reais e projeção de crescimento da operação konte.ai.</p>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid md:grid-cols-4 gap-6 mb-16">
+                <div class="glass rounded-2xl p-6 glow-border stat-card text-center" data-aos="fade-up" data-aos-delay="0">
+                    <p class="text-3xl font-bold gradient-text mb-2">43%</p>
+                    <p class="text-sm text-gray-400">Churn Atual</p>
+                    <p class="text-xs text-gray-600 mt-1">Meta: 19% em 12 meses</p>
+                </div>
+                <div class="glass rounded-2xl p-6 glow-border stat-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-3xl font-bold gradient-text">R$69 → ∞</p>
+                    <p class="text-sm text-gray-400">LTV Médio</p>
+                    <p class="text-xs text-gray-600 mt-1">De R$69 até recorrência infinita</p>
+                </div>
+                <div class="glass rounded-2xl p-6 glow-border stat-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-3xl font-bold gradient-text">$27,60</p>
+                    <p class="text-sm text-gray-400">Ticket Médio</p>
+                    <p class="text-xs text-gray-600 mt-1">Assinatura mensal</p>
+                </div>
+                <div class="glass rounded-2xl p-6 glow-border stat-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-3xl font-bold gradient-text">60</p>
+                    <p class="text-sm text-gray-400">Vendas Mês 1</p>
+                    <p class="text-xs text-gray-600 mt-1">+10% MoM de crescimento</p>
+                </div>
+            </div>
+
+            <!-- Chart: Projeção de Recorrência -->
+            <div class="glass rounded-3xl p-8 glow-border" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">Projeção de Recorrência</h3>
+                        <p class="text-sm text-gray-400">Recorrência Mensal (MRR) vs Equivalência de Capital Investido</p>
                     </div>
+                    <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-8 w-auto opacity-60">
+                </div>
+                <div class="relative" style="height: 400px;">
+                    <canvas id="projectionChart"></canvas>
+                </div>
+                <!-- Data Details -->
+                <div class="mt-8 pt-6 border-t border-white/10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Churn Rate</p>
+                        <p class="text-sm text-gray-300">43% → 19% <span class="text-gray-500">MoM</span></p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Ticket Médio</p>
+                        <p class="text-sm text-gray-300">$27,60 <span class="text-gray-500">/mês</span></p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Vendas</p>
+                        <p class="text-sm text-gray-300">60 iniciais <span class="text-gray-500">+10% MoM</span></p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Capital Equiv.</p>
+                        <p class="text-sm text-gray-300">MRR = 0,5% <span class="text-gray-500">do capital</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Churn Reduction Chart -->
+            <div class="mt-8 glass rounded-3xl p-8 glow-border" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-1">Redução de Churn</h3>
+                        <p class="text-sm text-gray-400">Projeção de queda do churn de 43% para 19% em 12 meses</p>
+                    </div>
+                </div>
+                <div class="relative" style="height: 300px;">
+                    <canvas id="churnChart"></canvas>
                 </div>
             </div>
         </div>
@@ -215,10 +297,10 @@
     <div class="divider"></div>
 
     <!-- Investidores -->
-    <section id="investidores" class="py-32 relative">
+    <section id="investidores" class="py-32 relative section-gradient">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex items-start gap-6 mb-16" data-aos="fade-up">
-                <span class="text-8xl font-black text-white/5 leading-none">02</span>
+                <span class="text-8xl font-black text-white/5 leading-none">03</span>
                 <div>
                     <h2 class="text-3xl md:text-5xl font-light mt-4">Quem <span class="gradient-text font-semibold">investe</span></h2>
                     <p class="text-gray-400 text-lg mt-4 max-w-2xl">Parceiros estratégicos que trazem infraestrutura, dados e escala para a operação.</p>
@@ -228,8 +310,8 @@
                 <!-- Mamba Culture -->
                 <div class="glass rounded-3xl p-8 glow-border stat-card" data-aos="fade-right" data-aos-duration="800">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
-                            <span class="text-2xl font-black gradient-text-gold">M</span>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center overflow-hidden">
+                            <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/mamba-logo" alt="Mamba Culture" class="w-12 h-12 object-contain" onerror="this.parentElement.innerHTML='<span class=\'text-2xl font-black gradient-text-gold\'>M</span>'">
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold">Mamba Culture</h3>
@@ -268,8 +350,8 @@
                 <!-- Matchin -->
                 <div class="glass rounded-3xl p-8 glow-border stat-card" data-aos="fade-left" data-aos-duration="800">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                            <span class="text-2xl font-black text-blue-400">M</span>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+                            <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/matchin-logo" alt="Matchin.ai" class="w-12 h-12 object-contain" onerror="this.parentElement.innerHTML='<span class=\'text-2xl font-black text-blue-400\'>M</span>'">
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold">Matchin.ai</h3>
@@ -315,7 +397,7 @@
     <section id="mercado" class="py-32 relative section-gradient">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex items-start gap-6 mb-16" data-aos="fade-up">
-                <span class="text-8xl font-black text-white/5 leading-none">03</span>
+                <span class="text-8xl font-black text-white/5 leading-none">04</span>
                 <div>
                     <h2 class="text-3xl md:text-5xl font-light mt-4">O <span class="gradient-text font-semibold">Mercado</span></h2>
                     <p class="text-gray-400 text-lg mt-4 max-w-2xl">O mercado de AI para criação de conteúdo está explodindo. Veja quem já está jogando.</p>
@@ -333,8 +415,8 @@
                 <!-- Poppy.AI -->
                 <div class="grid grid-cols-4 gap-4 p-6 border-b border-white/5 competitor-row">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center flex-shrink-0">
-                            <span class="text-sm font-bold text-pink-400">P</span>
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/poppy-logo" alt="Poppy.AI" class="w-8 h-8 object-contain" onerror="this.parentElement.innerHTML='<span class=\'text-sm font-bold text-pink-400\'>P</span>'">
                         </div>
                         <div>
                             <p class="font-medium text-sm">Poppy.AI</p>
@@ -356,8 +438,8 @@
                 <!-- Furion -->
                 <div class="grid grid-cols-4 gap-4 p-6 border-b border-white/5 competitor-row">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
-                            <span class="text-sm font-bold text-red-400">F</span>
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/furion-logo" alt="Furion AI" class="w-8 h-8 object-contain" onerror="this.parentElement.innerHTML='<span class=\'text-sm font-bold text-red-400\'>F</span>'">
                         </div>
                         <div>
                             <p class="font-medium text-sm">Furion AI</p>
@@ -379,8 +461,8 @@
                 <!-- konte.ai -->
                 <div class="grid grid-cols-4 gap-4 p-6 competitor-row bg-accent/5">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-sm font-bold text-accent">K</span>
+                        <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="w-8 h-8 object-contain">
                         </div>
                         <div>
                             <p class="font-medium text-sm text-accent">konte.ai</p>
@@ -419,7 +501,7 @@
     <!-- Divider -->
     <div class="divider"></div>
 
-    <!-- Parceria Section -->
+    <!-- Parceria Section — 2 Opções -->
     <section id="parceria" class="py-32 relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-20" data-aos="fade-up">
@@ -430,10 +512,10 @@
                 <h2 class="text-3xl md:text-5xl font-light">
                     Opções de <span class="gradient-text font-semibold">Partnership</span>
                 </h2>
-                <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Três modelos pensados para diferentes níveis de envolvimento e retorno.</p>
+                <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Dois modelos pensados para diferentes níveis de envolvimento e retorno.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Tier 1 -->
                 <div class="glass rounded-3xl p-8 glow-border tier-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="text-center mb-8">
@@ -500,38 +582,6 @@
                         <p class="text-xs text-accent/70 text-center">Melhor custo-benefício para escala</p>
                     </div>
                 </div>
-
-                <!-- Tier 3 -->
-                <div class="glass rounded-3xl p-8 glow-border tier-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-center mb-8">
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-accent/10 mb-4">
-                            <span class="text-xl font-bold text-accent">3</span>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Opção 1 + 2</h3>
-                        <p class="text-sm text-gray-400">Full Partnership</p>
-                    </div>
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-sm text-gray-300"><span class="text-white font-medium">Tudo da Opção 1</span> — Collabs + Variável + Equity</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-sm text-gray-300"><span class="text-white font-medium">Tudo da Opção 2</span> — Funil completo + Time dedicado</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-sm text-gray-300">Máximo <span class="text-white font-medium">alinhamento de interesses</span></span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span class="text-sm text-gray-300"><span class="text-white font-medium">Parceiro de longo prazo</span> no crescimento da plataforma</span>
-                        </div>
-                    </div>
-                    <div class="pt-6 border-t border-white/10">
-                        <p class="text-xs text-gray-500 text-center">Comprometimento total, retorno máximo</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -543,6 +593,7 @@
     <section class="py-32 relative hero-gradient">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div data-aos="fade-up">
+                <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-16 w-auto mx-auto mb-8 opacity-80">
                 <h2 class="text-3xl md:text-5xl font-light mb-6">
                     Vamos <span class="gradient-text font-semibold">conversar</span>?
                 </h2>
@@ -558,13 +609,13 @@
                     <h3 class="text-xl font-semibold mb-1">Rafael Simões</h3>
                     <p class="text-sm text-gray-400 mb-6">Simons Growth & Tech</p>
                     <div class="space-y-3 w-full">
-                        <a href="https://www.linkedin.com/in/rafael-sim%C3%B5es-69228115b/" target="_blank" class="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-xl bg-gradient-to-r from-accent to-blue-accent font-medium hover:opacity-90 transition-opacity">
+                        <a href="https://wa.me/5531993472290?text=Oi%20Rafael%2C%20vi%20a%20proposta%20da%20konte.ai%20e%20quero%20conversar!" target="_blank" class="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-xl whatsapp-btn font-medium transition-all duration-300 shadow-[0_0_30px_rgba(37,211,102,0.2)] hover:shadow-[0_0_50px_rgba(37,211,102,0.3)]">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Conversar no WhatsApp
+                        </a>
+                        <a href="https://www.linkedin.com/in/rafael-sim%C3%B5es-69228115b/" target="_blank" class="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-xl glass glow-border font-medium hover:bg-white/5 transition-all">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                             Conectar no LinkedIn
-                        </a>
-                        <a href="mailto:parcerias@studioflame.com.br" class="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-xl glass glow-border font-medium hover:bg-white/5 transition-all">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            Enviar E-mail
                         </a>
                     </div>
                 </div>
@@ -575,19 +626,195 @@
     <!-- Footer -->
     <footer class="py-8 border-t border-white/5">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <div class="w-6 h-6 rounded bg-gradient-to-br from-accent to-blue-accent flex items-center justify-center">
-                    <span class="text-xs font-bold">K</span>
-                </div>
-                <span class="text-sm text-gray-500">konte.ai — Proposta Confidencial</span>
+            <div class="flex items-center gap-3">
+                <img src="https://api.apify.com/v2/key-value-stores/Pl0HaWEyS9Bb5dHy9/records/konte-logo" alt="konte.ai" class="h-8 w-auto">
+                <span class="text-sm text-gray-500">— Proposta Confidencial</span>
             </div>
-            <p class="text-xs text-gray-600">© 2026 Simons Growth & Tech LTDA. Todos os direitos reservados.</p>
+            <p class="text-xs text-gray-600">&copy; 2026 Simons Growth & Tech LTDA. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Projection Data Calculation
+        const months = 12;
+        const ticketMedio = 27.6;
+        const churnStart = 0.43;
+        const churnEnd = 0.19;
+        const salesStart = 60;
+        const salesGrowth = 0.10;
+
+        let labels = [];
+        let mrrData = [];
+        let capitalData = [];
+        let churnData = [];
+        let activeSubs = 0;
+
+        for (let m = 1; m <= months; m++) {
+            labels.push('Mês ' + m);
+            const churnRate = churnStart - ((churnStart - churnEnd) / (months - 1)) * (m - 1);
+            const newSales = Math.round(salesStart * Math.pow(1 + salesGrowth, m - 1));
+            activeSubs = activeSubs * (1 - churnRate) + newSales;
+            const mrr = Math.round(activeSubs * ticketMedio);
+            const capital = Math.round(mrr / 0.005);
+            mrrData.push(mrr);
+            capitalData.push(capital);
+            churnData.push(Math.round(churnRate * 100 * 10) / 10);
+        }
+
+        // Projection Chart
+        const ctxProjection = document.getElementById('projectionChart').getContext('2d');
+        new Chart(ctxProjection, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Recorrência Mensal (MRR)',
+                        data: mrrData,
+                        backgroundColor: 'rgba(168, 85, 247, 0.6)',
+                        borderColor: 'rgba(168, 85, 247, 1)',
+                        borderWidth: 1,
+                        borderRadius: 6,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Equivalência de Capital Investido',
+                        data: capitalData,
+                        type: 'line',
+                        borderColor: 'rgba(99, 102, 241, 1)',
+                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+                        pointRadius: 4,
+                        fill: true,
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { intersect: false, mode: 'index' },
+                plugins: {
+                    legend: {
+                        labels: { color: '#9ca3af', font: { family: 'Inter', size: 12 }, usePointStyle: true, pointStyle: 'circle' }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(13,13,26,0.95)',
+                        titleColor: '#fff',
+                        bodyColor: '#d1d5db',
+                        borderColor: 'rgba(168,85,247,0.3)',
+                        borderWidth: 1,
+                        cornerRadius: 12,
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (context.datasetIndex === 0) {
+                                    return label + ': $' + context.parsed.y.toLocaleString('pt-BR');
+                                } else {
+                                    return label + ': $' + context.parsed.y.toLocaleString('pt-BR');
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: { color: '#6b7280', font: { family: 'Inter', size: 11 } }
+                    },
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: {
+                            color: '#a855f7',
+                            font: { family: 'Inter', size: 11 },
+                            callback: function(value) { return '$' + value.toLocaleString('pt-BR'); }
+                        },
+                        title: { display: true, text: 'MRR ($)', color: '#a855f7', font: { family: 'Inter', size: 12 } }
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        grid: { drawOnChartArea: false },
+                        ticks: {
+                            color: '#6366f1',
+                            font: { family: 'Inter', size: 11 },
+                            callback: function(value) { return '$' + (value / 1000).toFixed(0) + 'K'; }
+                        },
+                        title: { display: true, text: 'Capital Equiv. ($)', color: '#6366f1', font: { family: 'Inter', size: 12 } }
+                    }
+                }
+            }
+        });
+
+        // Churn Chart
+        const ctxChurn = document.getElementById('churnChart').getContext('2d');
+        new Chart(ctxChurn, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Churn Rate (%)',
+                    data: churnData,
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    borderWidth: 3,
+                    pointBackgroundColor: function(context) {
+                        const value = context.dataset.data[context.dataIndex];
+                        return value > 30 ? 'rgba(239, 68, 68, 1)' : value > 25 ? 'rgba(245, 158, 11, 1)' : 'rgba(34, 197, 94, 1)';
+                    },
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#9ca3af', font: { family: 'Inter', size: 12 }, usePointStyle: true }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(13,13,26,0.95)',
+                        titleColor: '#fff',
+                        bodyColor: '#d1d5db',
+                        borderColor: 'rgba(239,68,68,0.3)',
+                        borderWidth: 1,
+                        cornerRadius: 12,
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) { return 'Churn: ' + context.parsed.y + '%'; }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: { color: '#6b7280', font: { family: 'Inter', size: 11 } }
+                    },
+                    y: {
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: {
+                            color: '#ef4444',
+                            font: { family: 'Inter', size: 11 },
+                            callback: function(value) { return value + '%'; }
+                        },
+                        min: 10,
+                        max: 50,
+                        title: { display: true, text: 'Churn Rate (%)', color: '#ef4444', font: { family: 'Inter', size: 12 } }
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
