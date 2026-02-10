@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>konte.ai × Lucas Flame — Proposta de Parceria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { background: #030014; font-family: 'Inter', sans-serif; }
+
+        .gradient-mesh-1 { background: radial-gradient(ellipse at 20% 50%, rgba(120,50,255,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(255,50,120,0.1) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(50,120,255,0.08) 0%, transparent 50%); }
+        .gradient-mesh-2 { background: radial-gradient(ellipse at 70% 30%, rgba(120,50,255,0.08) 0%, transparent 50%), radial-gradient(ellipse at 20% 70%, rgba(50,200,255,0.06) 0%, transparent 50%); }
+
+        .text-gradient-main { background: linear-gradient(135deg, #c084fc, #f472b6, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .text-gradient-cool { background: linear-gradient(135deg, #818cf8, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .text-gradient-fire { background: linear-gradient(135deg, #f97316, #ef4444, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        .card-glass { background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+        .card-glass:hover { border-color: rgba(192,132,252,0.25); }
+
+        .border-gradient { position: relative; }
+        .border-gradient::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, rgba(192,132,252,0.4), rgba(244,114,182,0.2), rgba(34,211,238,0.3)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+
+        .glow-purple { box-shadow: 0 0 80px rgba(168,85,247,0.2), 0 0 160px rgba(168,85,247,0.05); }
+        .glow-pink { box-shadow: 0 0 60px rgba(244,114,182,0.15); }
+
+        .badge-gradient { background: linear-gradient(135deg, rgba(192,132,252,0.15), rgba(244,114,182,0.1)); border: 1px solid rgba(192,132,252,0.25); }
+
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); }
+
+        .ring-multi { background: linear-gradient(135deg, #c084fc, #f472b6, #22d3ee); padding: 3px; border-radius: 50%; }
+
+        .tier-glow { transition: all 0.4s ease; }
+        .tier-glow:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 60px rgba(168,85,247,0.15); }
+
+        .marquee-track { display: flex; animation: marquee 15s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 33% { transform: translateY(-8px) rotate(1deg); } 66% { transform: translateY(4px) rotate(-1deg); } }
+        .float { animation: float 8s ease-in-out infinite; }
+
+        .section-sep { height: 1px; background: linear-gradient(90deg, transparent, rgba(192,132,252,0.2), rgba(244,114,182,0.15), transparent); }
+
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        .shimmer { background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%); background-size: 200% 100%; animation: shimmer 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="text-white antialiased overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-[#030014]/70 backdrop-blur-2xl border-b border-white/5" data-aos="fade-down">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
+                    <span class="text-sm font-black">K</span>
+                </div>
+                <span class="text-lg font-semibold">konte<span class="text-gradient-main">.ai</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-xs text-gray-500 tracking-wide">
+                <a href="#platform" class="hover:text-purple-300 transition-colors">Plataforma</a>
+                <a href="#backers" class="hover:text-purple-300 transition-colors">Investidores</a>
+                <a href="#market" class="hover:text-purple-300 transition-colors">Mercado</a>
+                <a href="#offer" class="hover:text-purple-300 transition-colors">Proposta</a>
+            </div>
+            <a href="#offer" class="px-5 py-2 rounded-xl bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/20">
+                Ver Proposta
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center relative gradient-mesh-1">
+        <div class="orb w-[500px] h-[500px] bg-purple-600/10 top-10 -left-40 float"></div>
+        <div class="orb w-[400px] h-[400px] bg-pink-500/8 bottom-20 right-0 float" style="animation-delay:4s"></div>
+
+        <div class="max-w-6xl mx-auto px-6 pt-32 pb-20 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="flex-1" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="badge-gradient inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs text-purple-200 mb-10">
+                        <span class="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse"></span>
+                        Proposta Exclusiva — Fevereiro 2026
+                    </div>
+
+                    <div class="mb-2">
+                        <span class="text-sm text-gray-500 tracking-[0.3em] uppercase font-medium">SaaS de Criação de Conteúdo</span>
+                    </div>
+
+                    <h1 class="text-5xl sm:text-6xl lg:text-8xl font-light leading-[0.9] mb-3 tracking-tight">
+                        konte<span class="text-gradient-main font-bold">.ai</span>
+                    </h1>
+                    <div class="flex items-center gap-4 my-6">
+                        <div class="h-[1px] w-16 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <span class="text-2xl text-gradient-main font-light">×</span>
+                        <div class="h-[1px] w-16 bg-gradient-to-r from-pink-500 to-orange-400"></div>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight">
+                        Lucas<br><span class="text-gradient-main">Flame</span>
+                    </h1>
+
+                    <p class="text-base text-gray-400 max-w-lg mt-10 leading-relaxed">
+                        Uma parceria para dominar a criação de conteúdo com <span class="text-white font-medium">Inteligência Artificial</span> — audiência, tecnologia e escala real.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-10">
+                        <a href="#offer" class="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 font-semibold text-sm shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-500 overflow-hidden">
+                            <span class="relative z-10">Ver Opções de Parceria →</span>
+                            <div class="absolute inset-0 shimmer"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 lg:w-[380px]" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-br from-purple-600/20 via-pink-500/10 to-transparent rounded-[2rem] blur-2xl"></div>
+                        <div class="relative card-glass rounded-3xl p-8 border-gradient">
+                            <div class="flex flex-col items-center">
+                                <div class="ring-multi mb-5">
+                                    <img src="https://scontent-atl3-3.cdninstagram.com/v/t51.2885-19/468037094_3662312027392307_1820403816416972574_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=104&_nc_ohc=WR7_jSMPtJgQ7kNvgFuIxJV&_nc_gid=8c3ddd3cb39e464b87b0ac0f8e5e6b9c&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYFdpamLBT-x3B2VYPVxQHsLiKwg8KeU5nDJCqmqQbflDg&oe=67AD7EEB"
+                                         alt="Lucas Flame AI"
+                                         class="w-28 h-28 rounded-full object-cover"
+                                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23150030%22 width=%22100%22 height=%22100%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23c084fc%22 font-size=%2232%22>LF</text></svg>'">
+                                </div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="font-bold text-xl">Lucas Flame</span>
+                                    <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-8">@lucasflame.ai</p>
+
+                                <div class="w-full grid grid-cols-3 gap-3">
+                                    <div class="bg-gradient-to-b from-purple-500/10 to-transparent rounded-xl p-3 text-center">
+                                        <p class="text-xl font-bold text-gradient-main">505K</p>
+                                        <p class="text-[10px] text-gray-500 mt-1">Seguidores</p>
+                                    </div>
+                                    <div class="bg-gradient-to-b from-pink-500/10 to-transparent rounded-xl p-3 text-center">
+                                        <p class="text-xl font-bold">2.076</p>
+                                        <p class="text-[10px] text-gray-500 mt-1">Posts</p>
+                                    </div>
+                                    <div class="bg-gradient-to-b from-orange-500/10 to-transparent rounded-xl p-3 text-center">
+                                        <p class="text-xl font-bold">102</p>
+                                        <p class="text-[10px] text-gray-500 mt-1">Seguindo</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 pt-5 border-t border-white/5 w-full text-center">
+                                    <p class="text-xs text-gray-500 italic">"Trabalhe o MÍNIMO e produza o MÁXIMO com o poder da IA"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- Platform -->
+    <section id="platform" class="py-32 relative gradient-mesh-2">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-2xl mb-20" data-aos="fade-up">
+                <span class="text-xs tracking-[0.3em] uppercase text-purple-400 font-medium">01 — Plataforma</span>
+                <h2 class="text-4xl lg:text-5xl font-light mt-4 leading-tight">
+                    Criação de conteúdo<br><span class="text-gradient-main font-semibold">reinventada com IA</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="card-glass rounded-2xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Criação Automatizada</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">IA que transforma ideias em conteúdo pronto para publicar em Instagram, TikTok, YouTube e mais.</p>
+                </div>
+                <div class="card-glass rounded-2xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-orange-500/10 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Escala Real</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Produção em volume sem perder qualidade ou autenticidade da marca pessoal.</p>
+                </div>
+                <div class="card-glass rounded-2xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-blue-500/10 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">IA Personalizada</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Modelos treinados no tom, estilo e arquétipo de cada criador de conteúdo.</p>
+                </div>
+                <div class="card-glass rounded-2xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-teal-500/10 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Multi-Criador</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Plataforma para múltiplos influenciadores e marcas simultâneas.</p>
+                </div>
+            </div>
+
+            <!-- Preview -->
+            <div class="mt-16 relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-pink-500/10 to-orange-500/20 rounded-3xl blur-xl"></div>
+                <div class="relative card-glass rounded-3xl p-2">
+                    <div class="bg-[#060020] rounded-2xl p-12 md:p-20 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-600">Preview da Plataforma</p>
+                        <p class="text-xs text-gray-700 mt-1">Screenshots disponíveis na reunião</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- Investidores -->
+    <section id="backers" class="py-32 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-2xl mb-20" data-aos="fade-up">
+                <span class="text-xs tracking-[0.3em] uppercase text-purple-400 font-medium">02 — Investidores</span>
+                <h2 class="text-4xl lg:text-5xl font-light mt-4 leading-tight">
+                    Quem está<br><span class="text-gradient-main font-semibold">por trás</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mamba -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="0">
+                    <div class="absolute -inset-[1px] bg-gradient-to-br from-orange-500/30 via-red-500/10 to-transparent rounded-3xl"></div>
+                    <div class="relative bg-[#0a0020] rounded-3xl p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg shadow-orange-500/20">
+                                <span class="text-xl font-black">M</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Mamba Culture</h3>
+                                <p class="text-xs text-gray-400">Holding Educacional + Tech</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">Maior empresa educacional do Brasil para produtos digitais. +500K consumidores, 100+ colaboradores. Awsales + Assiny.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-orange-500/5 rounded-xl p-3 border border-orange-500/10">
+                                <p class="text-xs font-medium text-orange-300">Consultoria</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Estratégia de crescimento</p>
+                            </div>
+                            <div class="bg-orange-500/5 rounded-xl p-3 border border-orange-500/10">
+                                <p class="text-xs font-medium text-orange-300">Infra Audiovisual</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Produção de alto nível</p>
+                            </div>
+                            <div class="bg-orange-500/5 rounded-xl p-3 border border-orange-500/10">
+                                <p class="text-xs font-medium text-orange-300">Parcerias & Tech</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Network e tecnologia</p>
+                            </div>
+                            <div class="bg-orange-500/5 rounded-xl p-3 border border-orange-500/10">
+                                <p class="text-xs font-medium text-orange-300">Checkout & Escala</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Fluxo de caixa + infra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matchin -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute -inset-[1px] bg-gradient-to-br from-cyan-500/30 via-blue-500/10 to-transparent rounded-3xl"></div>
+                    <div class="relative bg-[#0a0020] rounded-3xl p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                                <span class="text-xl font-black">M</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Matchin.ai</h3>
+                                <p class="text-xs text-gray-400">Influencer Marketing Platform</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">Plataforma que conecta marcas com criadores. Curadoria humana + algoritmos para matching em escala.</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-cyan-500/5 rounded-xl p-3 border border-cyan-500/10">
+                                <p class="text-xs font-medium text-cyan-300">Base Tagger</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Dados categorizados</p>
+                            </div>
+                            <div class="bg-cyan-500/5 rounded-xl p-3 border border-cyan-500/10">
+                                <p class="text-xs font-medium text-cyan-300">Influenciadores</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Base ampla de criadores</p>
+                            </div>
+                            <div class="bg-cyan-500/5 rounded-xl p-3 border border-cyan-500/10">
+                                <p class="text-xs font-medium text-cyan-300">Performance</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Campanhas de conversão</p>
+                            </div>
+                            <div class="bg-cyan-500/5 rounded-xl p-3 border border-cyan-500/10">
+                                <p class="text-xs font-medium text-cyan-300">Comunidade</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Gestão de criadores</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- Mercado -->
+    <section id="market" class="py-32 relative gradient-mesh-2">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-2xl mb-20" data-aos="fade-up">
+                <span class="text-xs tracking-[0.3em] uppercase text-purple-400 font-medium">03 — Mercado</span>
+                <h2 class="text-4xl lg:text-5xl font-light mt-4 leading-tight">
+                    O cenário<br><span class="text-gradient-main font-semibold">competitivo</span>
+                </h2>
+            </div>
+
+            <div class="space-y-6" data-aos="fade-up">
+                <!-- Poppy -->
+                <div class="card-glass rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center shadow-lg shadow-pink-500/20 flex-shrink-0">
+                            <span class="text-lg font-black">P</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Poppy.AI</h3>
+                            <p class="text-xs text-gray-500">San Francisco · Bootstrapped · 6 funcionários</p>
+                            <p class="text-xs text-gray-400 mt-2 max-w-md">Whiteboard visual + IA para criadores. 5K+ usuários. 30% da receita via afiliados.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div class="text-center md:text-right">
+                            <p class="text-3xl font-black text-gradient-fire">$15M</p>
+                            <p class="text-[10px] text-gray-500 mt-1">ARR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furion -->
+                <div class="card-glass rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="flex items-center gap-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center shadow-lg shadow-red-500/20 flex-shrink-0">
+                            <span class="text-lg font-black">F</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Furion AI</h3>
+                            <p class="text-xs text-gray-500">Thiago Finch · 3.7M seguidores · 16K+ usuários</p>
+                            <p class="text-xs text-gray-400 mt-2 max-w-md">IA de marketing digital. R$300M+ em carreira. Distribuição via infoproduto e 50K+ alunos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div class="text-center md:text-right">
+                            <p class="text-3xl font-black text-gradient-fire">R$33M</p>
+                            <p class="text-[10px] text-gray-500 mt-1">Lançamento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- konte -->
+                <div class="relative">
+                    <div class="absolute -inset-[1px] bg-gradient-to-r from-purple-500/40 via-pink-500/20 to-orange-500/40 rounded-2xl"></div>
+                    <div class="relative bg-[#0a0020] rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-purple-500/30 flex-shrink-0">
+                                <span class="text-lg font-black">K</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gradient-main">konte.ai</h3>
+                                <p class="text-xs text-gray-400">Brasil · 2 Investidores Estratégicos · Em crescimento</p>
+                                <p class="text-xs text-purple-300 mt-2 max-w-md font-medium">SaaS nativo para criadores BR. Modelo escalável + distribuição via influenciadores. O melhor dos dois mundos.</p>
+                            </div>
+                        </div>
+                        <div class="badge-gradient px-5 py-2 rounded-xl">
+                            <p class="text-xs font-semibold text-purple-200">Oportunidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- Partnership -->
+    <section id="offer" class="py-32 relative">
+        <div class="orb w-[600px] h-[600px] bg-purple-600/5 top-0 left-1/2 -translate-x-1/2"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-xs tracking-[0.3em] uppercase text-purple-400 font-medium">04 — Proposta</span>
+                <h2 class="text-4xl lg:text-6xl font-light mt-4 leading-tight">
+                    Opções de<br><span class="text-gradient-main font-bold">Partnership</span>
+                </h2>
+                <p class="text-sm text-gray-500 mt-6 max-w-md mx-auto">Três modelos pensados para diferentes níveis de envolvimento e retorno.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Tier 1 -->
+                <div class="card-glass rounded-3xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-transparent flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-black text-purple-400/50">01</span>
+                        </div>
+                        <h3 class="text-lg font-bold">Conteúdos Orgânicos</h3>
+                        <p class="text-xs text-gray-500 mt-1">Collab + Variável Agressivo</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300">Conteúdos em <strong class="text-white">Collab</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Fixo simbólico</strong> + variável agressivo</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Impulsionamento</strong> pago</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Equity</strong> das assinaturas</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/5 text-center">
+                        <p class="text-[10px] text-gray-600 tracking-wider uppercase">Menor risco · Upside variável</p>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="relative tier-glow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                        <span class="px-5 py-1.5 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-xs font-bold shadow-xl shadow-purple-500/30">RECOMENDADO</span>
+                    </div>
+                    <div class="absolute -inset-[1px] bg-gradient-to-b from-purple-500/40 via-pink-500/20 to-transparent rounded-3xl"></div>
+                    <div class="relative bg-[#0a0020] rounded-3xl p-8">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                                <span class="text-3xl font-black text-gradient-main">02</span>
+                            </div>
+                            <h3 class="text-lg font-bold">Funil Ponta-a-Ponta</h3>
+                            <p class="text-xs text-gray-500 mt-1">Criativo + Metodologia + Setup</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-200"><strong class="text-white">Time criativo</strong> de alto nível</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-200">Metodologia <strong class="text-white">210K alunos</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-200">Setup: <strong class="text-white">follow-up, esteira, produto</strong></span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-200">Investimento <strong class="text-white">~R$5K</strong></span>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-5 border-t border-purple-500/20 text-center">
+                            <p class="text-[10px] text-purple-300 tracking-wider uppercase">Melhor custo-benefício</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="card-glass rounded-3xl p-8 tier-glow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500/20 to-transparent flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-black text-orange-400/50">03</span>
+                        </div>
+                        <h3 class="text-lg font-bold">Full Partnership</h3>
+                        <p class="text-xs text-gray-500 mt-1">Opção 1 + 2 Combinadas</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Tudo da Opção 1</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Tudo da Opção 2</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300">Máximo <strong class="text-white">alinhamento</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-300"><strong class="text-white">Parceiro de longo prazo</strong></span>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/5 text-center">
+                        <p class="text-[10px] text-gray-600 tracking-wider uppercase">Comprometimento total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- Contact -->
+    <section class="py-32 relative gradient-mesh-1">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl lg:text-6xl font-light leading-tight mb-6">
+                    Vamos<br><span class="text-gradient-main font-bold">conversar</span>?
+                </h2>
+                <p class="text-sm text-gray-500 max-w-md mx-auto mb-12">Proposta personalizada para Lucas Flame. Cada detalhe pensado para criar valor real.</p>
+            </div>
+
+            <div class="max-w-sm mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute -inset-[1px] bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-orange-500/30 rounded-3xl"></div>
+                    <div class="relative bg-[#0a0020] rounded-3xl p-10">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center mx-auto mb-5 shadow-xl shadow-purple-500/20">
+                            <span class="text-xl font-black">RS</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Rafael Simões</h3>
+                        <p class="text-xs text-gray-400 mb-8">Simons Growth & Tech</p>
+                        <div class="space-y-3">
+                            <a href="https://www.linkedin.com/in/rafael-sim%C3%B5es-69228115b/" target="_blank" class="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 font-semibold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/20">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                Conectar no LinkedIn
+                            </a>
+                            <a href="mailto:parcerias@studioflame.com.br" class="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl card-glass font-medium text-sm text-gray-300 hover:bg-white/5 transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                Enviar E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
+                    <span class="text-[10px] font-black">K</span>
+                </div>
+                <span class="text-xs text-gray-600">konte.ai · Proposta Confidencial</span>
+            </div>
+            <p class="text-[10px] text-gray-700">© 2026 Simons Growth & Tech LTDA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 900, once: true, offset: 100 });</script>
+</body>
+</html>
